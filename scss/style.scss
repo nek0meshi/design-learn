@@ -1,3 +1,30 @@
 * {
   color: #505050;
 }
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 12px 30px;
+  ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    li {
+      width: 100px;
+    }
+  }
+}
+
+.main {
+  text-align: center;
+
+  .container {
+    margin: 0 auto;
+  }
+}
+
+.footer {
+  text-align: center;
+}
