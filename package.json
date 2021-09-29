@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
+    "build": "cp node_modules/normalize.css/normalize.css public/css",
+    "build:watch": "npm run build && npm run sass:watch",
     "sass:watch": "sass --watch scss/style.scss public/css/style.css"
   },
   "devDependencies": {
