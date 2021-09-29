@@ -1,6 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+$main-color: #a26c54;
+$black-color: #505050;
+
 * {
-  color: #505050;
   box-sizing: border-box;
+  font-family: 'Lato', "游ゴシック", "Yu Gothic", "游ゴシック体", YuGothic, sans-serif;
+  font-size: 18px;
+  color: $black-color;
+}
+
+h1,
+h2,
+h3 {
+  padding: 0;
+  margin: 0;
+  color: $main-color;
+}
+
+.btn {
+  height: 52px;
+  font-size: 22px;
+  color: #fff;
+  background-color: $main-color;
+  border: 0;
+  border-radius: 10px;
 }
 
 .header {
@@ -8,13 +32,47 @@
   flex-direction: row;
   justify-content: space-between;
   padding: 12px 30px;
+
+  h1 {
+    color: $black-color;
+  }
+
   ul {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+
     li {
       width: 100px;
     }
+  }
+}
+
+.hero {
+  width: 100%;
+  height: 600px;
+  padding: 137px 0;
+  background-image: url("../images/keyboard-338502_1280.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  * {
+    margin: 0 auto;
+    color: #fff;
+  }
+
+  &-title {
+    font-size: 60px;
+  }
+
+  &-text {
+    width: 342px;
+    margin-top: 66px;
+  }
+
+  .inquiry-btn {
+    width: 170px;
+    margin-top: 66px;
   }
 }
 
