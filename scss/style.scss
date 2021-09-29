@@ -10,6 +10,7 @@ $main-content-width: 1200px;
   box-sizing: border-box;
   font-family: 'Lato', "游ゴシック", "Yu Gothic", "游ゴシック体", YuGothic, sans-serif;
   font-size: 18px;
+  line-height: 31px;
   color: $black-color;
 }
 
@@ -51,7 +52,7 @@ a {
 
 .section-text {
   width: 342px;
-  margin: 50px auto 0;
+  margin: 50px auto;
 }
 
 .header {
@@ -126,7 +127,6 @@ a {
     display: flex;
     gap: 30px;
     height: 450px;
-    margin-top: 50px;
     text-align: left;
   }
 
@@ -142,6 +142,34 @@ a {
 
   &-sub-textarea {
     margin-bottom: 50px;
+  }
+}
+
+.works {
+  width: $main-content-width;
+  margin: 0 auto;
+
+  &-card-wrap {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &-card {
+    width: 370px;
+    margin-bottom: 20px;
+    border: 1px solid $gray-color;
+
+    &-image {
+      height: 280px;
+      background-color: $gray-color;
+    }
+
+    &-textarea {
+      height: 90px;
+      padding: 21px 21px;
+    }
   }
 }
 
