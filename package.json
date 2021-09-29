@@ -5,10 +5,14 @@
   "scripts": {
     "build": "cp node_modules/normalize.css/normalize.css public/css",
     "build:watch": "npm run build && npm run sass:watch",
-    "sass:watch": "sass --watch scss/style.scss public/css/style.css"
+    "sass:watch": "sass --watch scss/style.scss public/css/style.css",
+    "stylelint:fix": "stylelint --fix scss"
   },
   "devDependencies": {
     "normalize.css": "^8.0.1",
-    "sass": "^1.42.1"
+    "sass": "^1.42.1",
+    "stylelint": "^13.13.1",
+    "stylelint-config-recess-order": "^2.5.0",
+    "stylelint-config-standard": "^22.0.0"
   }
 }
