@@ -6,6 +6,7 @@
     "sass:watch": "sass --watch scss/style.scss public/css/style.css"
   },
   "devDependencies": {
+    "normalize.css": "^8.0.1",
     "sass": "^1.42.1"
   }
 }
