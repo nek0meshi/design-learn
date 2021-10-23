@@ -12,6 +12,9 @@ $tablet-max-width: 1023px;
 $mobile-max-width: 768px;
 $mobile-content-width: 540px;
 
+$header-height: 74px;
+$mobile-header-height: 55px;
+
 * {
   box-sizing: border-box;
   font-family: 'Lato', "游ゴシック", "Yu Gothic", "游ゴシック体", YuGothic, sans-serif;
@@ -81,11 +84,11 @@ a {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  height: 74px;
+  height: $header-height;
   padding: 0 30px;
 
   @media (max-width: $mobile-max-width) {
-    height: 55px;
+    height: $mobile-header-height;
     padding: 0 15px;
   }
 
@@ -171,12 +174,12 @@ a {
       top: 0;
       left: 0;
       z-index: 100;
-      background-color: #fff;
+      background-color:rgba(255, 255, 255, 0.9);
       opacity: 0;
       pointer-events: none;
 
       &.isOpen {
-        opacity: 0.9;
+        opacity: 1;
         pointer-events: inherit;
       }
 
@@ -205,10 +208,17 @@ a {
 }
 
 .hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   width: 100%;
-  height: 600px;
+  height: calc(100vh - $header-height);
   padding: 137px 0;
   background-image: url("../images/keyboard-338502_1280.png");
+
+  @media (max-width: $mobile-max-width) {
+    height: calc(100vh - $mobile-header-height);
+  }
 
   * {
     margin: 0 auto;
@@ -221,12 +231,10 @@ a {
 
   &-text {
     width: 342px;
-    margin-top: 66px;
   }
 
   .inquiry-btn {
     width: 200px;
-    margin-top: 66px;
   }
 }
 
