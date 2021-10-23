@@ -409,7 +409,7 @@ a {
 
     > input,
     > textarea {
-      border-color: $gray-color;
+      border: solid 1px $gray-color;
       border-radius: 5px;
     }
     label {
