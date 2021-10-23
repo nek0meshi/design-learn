@@ -16,7 +16,7 @@ $mobile-content-width: 540px;
   box-sizing: border-box;
   font-family: 'Lato', "游ゴシック", "Yu Gothic", "游ゴシック体", YuGothic, sans-serif;
   font-size: 18px;
-  line-height: 31px;
+  line-height: 1.5;
   color: $black-color;
 }
 
@@ -37,6 +37,7 @@ ul,
 ol {
   list-style: none;
   margin: 0;
+  padding: 0;
 }
 
 a {
@@ -67,6 +68,14 @@ a {
   margin: 50px auto;
 }
 
+.container {
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .header {
   display: flex;
   flex-direction: row;
@@ -77,6 +86,7 @@ a {
 
   @media (max-width: $mobile-max-width) {
     height: 55px;
+    padding: 0 15px;
   }
 
   .page-title {
@@ -166,7 +176,7 @@ a {
       pointer-events: none;
 
       &.isOpen {
-        opacity: 0.7;
+        opacity: 0.9;
         pointer-events: inherit;
       }
 
@@ -189,13 +199,16 @@ a {
   }
 }
 
+.bg-image-section {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .hero {
   width: 100%;
   height: 600px;
   padding: 137px 0;
   background-image: url("../images/keyboard-338502_1280.png");
-  background-repeat: no-repeat;
-  background-size: cover;
 
   * {
     margin: 0 auto;
@@ -212,7 +225,7 @@ a {
   }
 
   .inquiry-btn {
-    width: 170px;
+    width: 200px;
     margin-top: 66px;
   }
 }
@@ -221,18 +234,13 @@ a {
   margin-bottom: 100px;
   text-align: center;
 
-  .container {
-    margin: 0 auto;
-  }
-
-  .container > section {
+  section:not(:first-child) {
     margin-top: 100px;
   }
 }
 
 .about {
   max-width: $main-content-width;
-  margin: 0 auto;
   @media (max-width: $mobile-max-width) {
     max-width: $mobile-content-width;
   }
@@ -244,7 +252,6 @@ a {
   &-wrap {
     display: flex;
     gap: 30px;
-    height: 450px;
     text-align: left;
     @media (max-width: $mobile-max-width) {
       flex-direction: column;
@@ -254,6 +261,7 @@ a {
 
   &-image {
     width: 50%;
+    height: 450px;
     background-color: $gray-color;
     @media (max-width: $mobile-max-width) {
       width: 100%;
@@ -266,7 +274,6 @@ a {
     height: 100%;
     @media (max-width: $mobile-max-width) {
       width: 100%;
-      height: 50%;
       margin: auto;
     }
   }
@@ -278,7 +285,6 @@ a {
 
 .works {
   max-width: $main-content-width;
-  margin: 0 auto;
   @media (max-width: $mobile-max-width) {
     max-width: $mobile-content-width;
   }
@@ -306,10 +312,13 @@ a {
     &-image {
       height: 280px;
       background-color: $gray-color;
+
+      @media (max-width: $tablet-max-width) {
+        height: 180px;
+      }
     }
 
     &-textarea {
-      height: 90px;
       padding: 21px 21px;
     }
   }
@@ -317,7 +326,6 @@ a {
 
 .service {
   max-width: $main-content-width;
-  margin: 0 auto;
   @media (max-width: $mobile-max-width) {
     max-width: $mobile-content-width;
   }
@@ -349,17 +357,18 @@ a {
 }
 
 .skills {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-image: url('../images/macbook-336692_1280.png');
+
   * {
     color: $white-color;
-    opacity: 0.8;
+    opacity: 0.9;
     text-align: left;
   }
-  padding: 20px calc((100% - $main-content-width) / 2);
-  background-image: url('../images/macbook-336692_1280.png');
 
   &-content {
     margin: 0 auto;
-    padding: 30px 0;
 
     @media (max-width: $mobile-max-width) {
       max-width: $mobile-content-width;
@@ -429,7 +438,7 @@ a {
 }
 
 .footer {
-  padding: 20px 0;
+  padding: 38px 0;
   background-color: #C6A394;
   text-align: center;
   * {
@@ -442,5 +451,6 @@ a {
   &-links {
     display: flex;
     justify-content: space-between;
+    padding: 0;
   }
 }
