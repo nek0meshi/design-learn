@@ -2,6 +2,7 @@
 
 $main-color: #a26c54;
 $black-color: #505050;
+$light-black-color: #777;
 $gray-color: #ccc;
 $white-color: #fff;
 $main-content-width: 1200px;
@@ -91,11 +92,42 @@ a {
   .header-links {
     display: flex;
     flex-direction: row;
-    gap: 38px;
+    gap: 30px;
     justify-content: space-between;
     @media (max-width: $mobile-max-width) {
       display: none;
       flex-direction: column;
+    }
+
+    > li {
+      > a {
+        position: relative;
+        padding: 5px 5px;
+
+        &::after {
+          content: '';
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          width: 0;
+          border-bottom: solid 3px $main-color;
+          transition:0.25s;
+
+          &:hover {
+            width: 100%;
+          }
+        }
+
+        &:hover {
+          color: $light-black-color;
+
+          &::after {
+            transition: 0.25s;
+            width: 100%;
+            opacity: 1;
+          }
+        }
+      }
     }
   }
 
