@@ -381,5 +381,18 @@ a {
 }
 
 .footer {
+  padding: 20px 0;
+  background-color: #C6A394;
   text-align: center;
+  * {
+    color: $white-color;
+  }
+  &-content {
+    margin: 0 auto;
+    max-width: $mobile-content-width;
+  }
+  &-links {
+    display: flex;
+    justify-content: space-between;
+  }
 }
