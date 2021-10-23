@@ -1,17 +1,9 @@
-document
-  .querySelector('#hamburger')
-  .addEventListener('click', function () {
-    document
-      .querySelector('#hamburger-menu')
-      .classList
-      .toggle('isOpen');
+$(function() {
+  $('#hamburger').on('click', function () {
+    $('#hamburger-menu').toggleClass('isOpen');
   });
 
-document
-  .querySelector('#hamburger-menu')
-  .addEventListener('click', function () {
-    document
-      .querySelector('#hamburger-menu')
-      .classList
-      .remove('isOpen');
+  $('#hamburger-menu').on('click', function () {
+    $('#hamburger-menu').removeClass('isOpen');
   });
+});
