@@ -147,6 +147,7 @@ a {
   .hamburger {
     display: none;
     flex-direction: column;
+    position: relative;
     height: 40px;
     width: 40px;
     z-index: 101;
@@ -156,13 +157,42 @@ a {
       display: flex;
     }
 
-    > .hamburger-bar {
-      width: 100%;
+    &-wrap {
+      &.isOpen {
+        .hamburger-menu {
+          opacity: 1;
+          pointer-events: inherit;
+        }
+        .hamburger-bar {
+          top: 20px;
+          transition: 0.5s;
+          &:first-child,
+          &:nth-child(2) {
+            transform: rotate(0.125turn);
+            transform: rotate(0.125turn);
+          }
+          &:nth-child(3) {
+            transform: rotate(-0.125turn);
+          }
+        }
+      }
+    }
+
+    &-bar {
+      position: absolute;
+      width: 80%;
       border: solid 1px;
-      margin-top: 8px;
+      z-index: 101;
+      transition: 0.5s;
 
       &:first-child {
-        margin-top: 4px;
+        top: 10px;
+      }
+      &:nth-child(2) {
+        top: 20px;
+      }
+      &:nth-child(3) {
+        top: 30px;
       }
     }
 
@@ -177,11 +207,6 @@ a {
       background-color:rgba(255, 255, 255, 0.9);
       opacity: 0;
       pointer-events: none;
-
-      &.isOpen {
-        opacity: 1;
-        pointer-events: inherit;
-      }
 
       &-links {
         display: flex;

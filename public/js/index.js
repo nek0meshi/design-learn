@@ -1,10 +1,10 @@
 $(function() {
   $('#hamburger').on('click', function () {
-    $('#hamburger-menu').toggleClass('isOpen');
+    $('#hamburger-wrap').toggleClass('isOpen');
   });
 
   $('#hamburger-menu').on('click', function () {
-    $('#hamburger-menu').removeClass('isOpen');
+    $('#hamburger-wrap').removeClass('isOpen');
   });
 
   // ref. http://kyasper.com/jquery-tips/
